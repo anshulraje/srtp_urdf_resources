@@ -1,0 +1,16 @@
+<launch>
+
+    <!-- Arguments that the user can enter with default values -->
+    <arg name="model" default="$(find urdf_tutorial)/urdf/01-myfirst.urdf"/>
+    <arg name="gui" default="true"/>
+
+    <!-- Loading parameter server -->
+    <param name="robot_description" command="$(find xacro)/xacro $(arg model)"/>
+
+    <!-- Launching multiple nodes -->
+    <node if="$(arg gui)" name="joint_state_publisher" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui"/>
+    <node unless="$(arg gui)" name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher"/>
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
+    <node name="rviz" pkg="rviz" type="rviz"/>
+
+</launch>
