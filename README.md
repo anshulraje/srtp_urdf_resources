@@ -13,6 +13,6 @@ sudo apt install python3-wstool python3-catkin-tools \
 ```
 This is what you will be making:
 
-https://user-images.githubusercontent.com/88229267/212882749-e9c83282-ac91-4fdd-97ce-e1613271ba2f.mp4
+https://user-images.githubusercontent.com/88229267/212883168-88a3d3c0-419c-4725-8386-6962cfe3dae6.mp4
 
 Happy learning!
